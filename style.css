@@ -82,3 +82,16 @@ footer {
 .resume-btn:hover {
   background-color: #005bb5;
 }
+
+.github-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0078ff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.github-btn:hover {
+  background-color: #005bb5;
+}
