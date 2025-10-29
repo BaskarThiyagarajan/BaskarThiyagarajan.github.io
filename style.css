@@ -6,58 +6,40 @@ body {
   color: #333;
 }
 
-/* Header container */
+/* === FINAL HEADER FIX === */
 header {
   text-align: center;
-  background-color: #0d1117; /* same as your profile section */
+  background-color: #0d1117;
   padding: 25px 15px;
   color: #fff;
   border-radius: 20px;
   max-width: 95%;
   margin: 20px auto;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-  overflow: visible;
+  overflow: visible !important; /* ✅ Force allow text visibility */
+  white-space: normal !important;
 }
 
-/* Profile Picture */
-header .profile-pic {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  border: 3px solid #00e6ff;
-}
-
-/* Title */
 header h1 {
-  font-size: clamp(1.3rem, 4vw, 2.3rem);  /* ✅ scales with screen */
+  font-size: clamp(1.3rem, 4vw, 2.3rem);
   color: #00e6ff;
   margin-bottom: 10px;
-  white-space: normal;   /* ✅ allow wrapping gracefully */
-  overflow: visible;
-  text-overflow: unset;
+  white-space: normal !important; /* ✅ Allow wrapping */
+  overflow: visible !important; /* ✅ Prevent clipping */
+  text-overflow: unset !important; /* ✅ Remove "..." */
   display: block;
   line-height: 1.3;
 }
 
-/* Subheading */
 header p {
   font-size: clamp(1rem, 3.5vw, 1.3rem);
   color: #ccc;
   margin-top: 5px;
 }
 
-/* ✅ Make sure text doesn't clip on very small screens */
 @media (max-width: 400px) {
-  header {
-    padding: 20px 10px;
-  }
   header h1 {
     font-size: 1.2rem;
-    white-space: normal;
-  }
-  header p {
-    font-size: 0.9rem;
   }
 }
 
