@@ -59,6 +59,7 @@ header p {
 .badge.orange { background: #ff9800; color: black; }
 .badge.blue { background: #2196f3; color: black; }
 .badge.red { background: #e53935; color: black; }
+.badge.white { background: #d3e7ed; color: black; }
 
 section {
   padding: 40px 20px;
