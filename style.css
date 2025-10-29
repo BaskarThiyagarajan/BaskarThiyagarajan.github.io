@@ -6,51 +6,55 @@ body {
   color: #333;
 }
 
+/* Header Container */
 header {
   text-align: center;
-  background-color: #1e1e1e;
-  color: white;
-  padding: 50px 20px;
-  border-bottom: 3px solid #00bfa5;
+  background-color: #0d1117;  /* or same as your theme */
+  padding: 20px;
+  color: #fff;
+  overflow: visible !important;   /* ✅ allow full content to be visible */
+  white-space: nowrap !important; /* ✅ don't wrap text in header */
 }
 
+/* Profile Picture */
 header .profile-pic {
-  width: 250px;
-  height: 250px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  border: 4px solid white;
-  object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
+/* Header Title */
 header h1 {
-  font-size: clamp(1.5rem, 5vw, 2.2rem);
+  font-size: clamp(1.2rem, 5vw, 2.2rem);
   color: #00e6ff;
   margin-bottom: 10px;
-  white-space: nowrap;       
-  overflow: visible;         
-  text-overflow: unset;      
-  transform: scale(0.9);     
+  white-space: nowrap !important;   /* ✅ stay in one line */
+  overflow: visible !important;     /* ✅ show full text */
+  text-overflow: unset !important;  /* ✅ remove ellipsis */
+  display: inline-block;            /* ✅ prevent auto-wrap block behavior */
+  width: auto;                      /* ✅ don’t restrict width */
 }
 
+/* Subheading */
 header p {
   font-size: clamp(1rem, 4vw, 1.2rem);
   color: #ccc;
   margin-top: 5px;
-  white-space: nowrap;       
-  overflow: visible;
-  text-overflow: unset;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  display: inline-block;
+  width: auto;
 }
 
-/* Responsive adjustment for smaller devices */
-@media (max-width: 480px) {
+/* Optional: On very small screens, just shrink font instead of truncating */
+@media (max-width: 400px) {
   header h1 {
-    font-size: 1.3rem;      
-    transform: scale(0.95);
+    font-size: 1.1rem;
   }
-
   header p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
 
