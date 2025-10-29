@@ -24,17 +24,23 @@ header .profile-pic {
 }
 
 header h1 {
-  font-size: 1.6rem;
-  margin: 10px 0;
-  color: #ffffff; /* make it visible */
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* slight glow */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   white-space: nowrap;
+  font-size: clamp(1.1rem, 4vw, 2rem); /* responsive font scaling */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  width: 100%;
 }
-@media (min-width: 768px){
-  header h1{
-    font-size: 2rem;
-  }
+
+/* Optional: center the header content properly */
+header {
+  text-align: center;
+  padding: 1rem;
 }
+
 
 
 header p {
