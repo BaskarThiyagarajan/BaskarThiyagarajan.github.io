@@ -5,39 +5,42 @@ body {
   background-color: #f8f9fa;
   color: #333;
 }
-
+/* ===== Header Section ===== */
 header {
+  background-color: #0d1117; /* Same as other sections */
+  color: #ffffff;
   text-align: center;
-  background-color: #1e1e1e;
-  color: white;
-  padding: 50px 20px;
-  border-bottom: 3px solid #00bfa5;
+  padding: 80px 20px 60px;
+  border-radius: 12px;
+  margin: 50px auto;
+  width: 85%;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
 }
 
-header .profile-pic {
-  width: 250px;
-  height: 250px;
+/* Profile Picture */
+.profile-pic {
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 4px solid white;
   object-fit: cover;
+  border: 3px solid #00e6ff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
   margin-bottom: 20px;
 }
 
+/* Header Text */
 header h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  gap: 10px;
-  font-size: 1.6rem; /* smaller font size for mobile */
-  white-space: nowrap; /* keeps text in one line */
+  font-size: 2.2rem;
+  color: #00e6ff;
+  margin-bottom: 10px;
 }
 
-@media (min-width: 768px) {
-  header h1 {
-    font-size: 2rem; /* bigger for desktop */
-  }
+header p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-top: 5px;
 }
+
 
 
 
