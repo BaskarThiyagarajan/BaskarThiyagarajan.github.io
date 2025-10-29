@@ -23,35 +23,37 @@ header .profile-pic {
   margin-bottom: 20px;
 }
 
-/* ===== Responsive Fix for Header Text Wrapping ===== */
 header h1 {
-  font-size: 2.2rem;
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
   color: #00e6ff;
   margin-bottom: 10px;
-  white-space: nowrap;        /* ✅ Prevent wrapping */
-  overflow: hidden;           /* ✅ Hide overflow if text is too long */
-  text-overflow: ellipsis;    /* ✅ Add ... if it overflows */
+  white-space: nowrap;       
+  overflow: visible;         
+  text-overflow: unset;      
+  transform: scale(0.9);     
 }
 
 header p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 4vw, 1.2rem);
   color: #ccc;
   margin-top: 5px;
-  white-space: nowrap;        /* ✅ Prevent wrapping of name + role */
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: nowrap;       
+  overflow: visible;
+  text-overflow: unset;
 }
 
-/* Slightly scale text down on very small screens */
+/* Responsive adjustment for smaller devices */
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;      
+    transform: scale(0.95);
   }
 
   header p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
+
 
 
 .badges {
