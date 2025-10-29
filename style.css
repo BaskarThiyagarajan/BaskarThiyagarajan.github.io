@@ -6,57 +6,61 @@ body {
   color: #333;
 }
 
-/* Header Container */
+/* Header container */
 header {
   text-align: center;
-  background-color: #0d1117;  /* or same as your theme */
-  padding: 20px;
+  background-color: #0d1117; /* same as your profile section */
+  padding: 25px 15px;
   color: #fff;
-  overflow: visible !important;   /* ✅ allow full content to be visible */
-  white-space: nowrap !important; /* ✅ don't wrap text in header */
+  border-radius: 20px;
+  max-width: 95%;
+  margin: 20px auto;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  overflow: visible;
 }
 
 /* Profile Picture */
 header .profile-pic {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   margin-bottom: 15px;
+  border: 3px solid #00e6ff;
 }
 
-/* Header Title */
+/* Title */
 header h1 {
-  font-size: clamp(1.2rem, 5vw, 2.2rem);
+  font-size: clamp(1.3rem, 4vw, 2.3rem);  /* ✅ scales with screen */
   color: #00e6ff;
   margin-bottom: 10px;
-  white-space: nowrap !important;   /* ✅ stay in one line */
-  overflow: visible !important;     /* ✅ show full text */
-  text-overflow: unset !important;  /* ✅ remove ellipsis */
-  display: inline-block;            /* ✅ prevent auto-wrap block behavior */
-  width: auto;                      /* ✅ don’t restrict width */
+  white-space: normal;   /* ✅ allow wrapping gracefully */
+  overflow: visible;
+  text-overflow: unset;
+  display: block;
+  line-height: 1.3;
 }
 
 /* Subheading */
 header p {
-  font-size: clamp(1rem, 4vw, 1.2rem);
+  font-size: clamp(1rem, 3.5vw, 1.3rem);
   color: #ccc;
   margin-top: 5px;
-  white-space: nowrap !important;
-  overflow: visible !important;
-  text-overflow: unset !important;
-  display: inline-block;
-  width: auto;
 }
 
-/* Optional: On very small screens, just shrink font instead of truncating */
+/* ✅ Make sure text doesn't clip on very small screens */
 @media (max-width: 400px) {
+  header {
+    padding: 20px 10px;
+  }
   header h1 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    white-space: normal;
   }
   header p {
     font-size: 0.9rem;
   }
 }
+
 
 
 
