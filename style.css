@@ -55,10 +55,10 @@ header p {
   font-weight: bold;
 }
 
-.badge.green { background: #4caf50; color: white; }
-.badge.orange { background: #ff9800; color: white; }
-.badge.blue { background: #2196f3; color: white; }
-.badge.red { background: #e53935; color: white; }
+.badge.green { background: #4caf50; color: black; }
+.badge.orange { background: #ff9800; color: black; }
+.badge.blue { background: #2196f3; color: black; }
+.badge.red { background: #e53935; color: black; }
 
 section {
   padding: 40px 20px;
